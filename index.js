@@ -167,7 +167,7 @@ function oyun(oyuncu, bilgisayar){
   }
 }
 }
-return oyun('Taş');
+oyun('Taş');
 
 
 /* Görev 4 : Metrik Dönüştürücü */
@@ -184,7 +184,7 @@ function milDonusturucu(Kilometre){
   var milDonusturucu = Kilometre * 0.621371
   console.log(milDonusturucu);
 }
-return milDonusturucu(26);
+milDonusturucu(26);
 
 
 
@@ -200,7 +200,7 @@ function feetDonusturucu(Santimetre){
   var feetDonusturucu = Santimetre * 0.03
   console.log(feetDonusturucu);
 }
-return feetDonusturucu(13);
+feetDonusturucu(13);
 
 
 
@@ -222,7 +222,7 @@ function cocukSarkisi(sayı){
     console.log("%s küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!",sayı)
   }
 }
-return cocukSarkisi(5)
+cocukSarkisi(5)
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -257,7 +257,7 @@ function notHesapla(sinav){
   }
 
 }
-return notHesapla(72)
+notHesapla(72)
 
 
 

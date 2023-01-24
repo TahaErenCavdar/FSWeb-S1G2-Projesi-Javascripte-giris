@@ -78,8 +78,8 @@ Aşağıdakileri yapın:
 function carpma(a,b){
   return a * b
 }
-let x = carpma(4,3)
-console.log(x);
+console.log(carpma(4,3))
+
 
 
 
@@ -93,11 +93,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(a){
-   return a * 7
+function kopeginYasi(köpekYasi){
+   return köpekYasi * 7
 }
-let y = kopeginYasi(4)
-console.log(y)
+console.log(kopeginYasi(4))
 
 
 
@@ -121,53 +120,28 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
-
-function oyun(oyuncu, bilgisayar){
-  var a = Math.floor(Math.random() * 3)
+var a = Math.floor(Math.random() * 3)
   if(a == 0){
-   var bilgisayar = 'Taş';
+    var bilgisayar = 'Taş';
   }
   if(a == 1){
-   var bilgisayar = 'Kağıt';
+    var bilgisayar = 'Kağıt';
   }
   if(a == 2){
-    var bilgisayar = 'Makas';
+     var bilgisayar = 'Makas';
   }
-  if('Taş' == oyuncu){
-    if(bilgisayar = 'Taş'){
-      console.log('Beraberlik');
-    }
-    else if(bilgisayar = 'Kağıt'){
-      console.log('Kaybettin!');
-    }
-    else if(bilgisayar = 'Makas'){
-      console.log('Kazandın!');
-    }
+function oyun(oyuncu, bilgisayar){
+  if(oyuncu === bilgisayar){
+    return 'Beraberlik';
   }
-  if('Kağıt' == oyuncu){
-    if(bilgisayar = 'Taş'){
-      console.log('Kazandın!');
-    }
-    else if(bilgisayar = 'Kağıt'){
-      console.log('Beraberlik');
-    }
-    else if(bilgisayar = 'Makas'){
-      console.log('Kaybettin!');
-    }
+  else if(oyuncu=='Taş' && bilgisayar == 'Makas' || oyuncu == 'Kağıt' && bilgisayar == 'Taş' || oyuncu == 'Makas' && bilgisayar == 'Kağıt'){
+    return 'Kazandın!';
   }
-  if('Makas' == oyuncu){
-    if(bilgisayar = 'Taş'){
-      console.log('Kaybettin!');
-    }
-    else if(bilgisayar = 'Kağıt'){
-      console.log('Kazandın!');
-    }
-    else if(bilgisayar = 'Makas'){
-      console.log('Beraberlik');
+  else{
+    return 'Kaybettin!';
   }
 }
-}
-oyun('Taş');
+
 
 
 /* Görev 4 : Metrik Dönüştürücü */
@@ -181,10 +155,10 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 */
 
 function milDonusturucu(Kilometre){
-  var milDonusturucu = Kilometre * 0.621371
-  console.log(milDonusturucu);
+  var mil = Kilometre * 0.621371
+  return mil;
 }
-milDonusturucu(26);
+console.log(milDonusturucu(26))
 
 
 
@@ -197,10 +171,10 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 */
 
 function feetDonusturucu(Santimetre){
-  var feetDonusturucu = Santimetre * 0.03
-  console.log(feetDonusturucu);
+  var feet = Santimetre / 30.48
+  return feet
 }
-feetDonusturucu(13);
+console.log(feetDonusturucu(13));
 
 
 
@@ -219,10 +193,11 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 
 function cocukSarkisi(sayı){
   for(sayı; sayı > 0; sayı--){
-    console.log("%s küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!",sayı)
+   return (sayı + ' küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!');
   }
 }
-cocukSarkisi(5)
+
+ 
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -240,24 +215,24 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
 */
 
 function notHesapla(sinav){
-  if (90 < sinav && sinav < 100){
-    console.log('A aldın');
+  if (90 <= sinav && sinav < 100){
+    return 'A aldın';
   }
-  else if(80 < sinav && sinav < 89){
-    console.log('B aldın');
+  else if(80 <= sinav && sinav < 89){
+    return 'B aldın';
   }
-  else if(70 < sinav && sinav < 79){
-    console.log('C aldın');
+  else if(70 <= sinav && sinav < 79){
+    return 'C aldın';
   }
-  else if(60 < sinav && sinav < 69){
-    console.log('D aldın')
+  else if(60 <= sinav && sinav < 69){
+    return 'D aldın';
   }
   else{
-    console.log('F aldın')
+    return 'F aldın';
   }
 
 }
-notHesapla(72)
+console.log(notHesapla(80))
 
 
 

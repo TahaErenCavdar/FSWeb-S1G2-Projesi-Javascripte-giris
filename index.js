@@ -19,6 +19,13 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+var surucuYasi = 20;
+if (surucuYasi > 18){
+  console.log('True');
+}
+else{
+  console.log('false')
+}
 
 
 
@@ -33,7 +40,12 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+var birinciDeger = 13
+var ikinciDeger = 12
+if(birinciDeger > ikinciDeger){
+   var birinciDeger = 14;
+   console.log(birinciDeger)
+}
 
 
 
@@ -48,7 +60,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
+var a = '1999'
+var b = parseInt(a)
+console.log(b)
 
 
 
@@ -61,9 +75,11 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  return a * b
 }
+let x = carpma(4,3)
+console.log(x);
 
 
 
@@ -77,9 +93,11 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(a){
+   return a * 7
 }
+let y = kopeginYasi(4)
+console.log(y)
 
 
 
@@ -105,9 +123,51 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  var a = Math.floor(Math.random() * 3)
+  if(a == 0){
+   var bilgisayar = 'Taş';
+  }
+  if(a == 1){
+   var bilgisayar = 'Kağıt';
+  }
+  if(a == 2){
+    var bilgisayar = 'Makas';
+  }
+  if('Taş' == oyuncu){
+    if(bilgisayar = 'Taş'){
+      console.log('Beraberlik');
+    }
+    else if(bilgisayar = 'Kağıt'){
+      console.log('Kaybettin!');
+    }
+    else if(bilgisayar = 'Makas'){
+      console.log('Kazandın!');
+    }
+  }
+  if('Kağıt' == oyuncu){
+    if(bilgisayar = 'Taş'){
+      console.log('Kazandın!');
+    }
+    else if(bilgisayar = 'Kağıt'){
+      console.log('Beraberlik');
+    }
+    else if(bilgisayar = 'Makas'){
+      console.log('Kaybettin!');
+    }
+  }
+  if('Makas' == oyuncu){
+    if(bilgisayar = 'Taş'){
+      console.log('Kaybettin!');
+    }
+    else if(bilgisayar = 'Kağıt'){
+      console.log('Kazandın!');
+    }
+    else if(bilgisayar = 'Makas'){
+      console.log('Beraberlik');
+  }
 }
-
+}
+return oyun('Taş');
 
 
 /* Görev 4 : Metrik Dönüştürücü */
@@ -120,9 +180,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(Kilometre){
+  var milDonusturucu = Kilometre * 0.621371
+  console.log(milDonusturucu);
 }
+return milDonusturucu(26);
 
 
 
@@ -134,9 +196,11 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(Santimetre){
+  var feetDonusturucu = Santimetre * 0.03
+  console.log(feetDonusturucu);
 }
+return feetDonusturucu(13);
 
 
 
@@ -153,10 +217,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(sayı){
+  for(sayı; sayı > 0; sayı--){
+    console.log("%s küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!",sayı)
+  }
 }
-
+return cocukSarkisi(5)
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -173,9 +239,25 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(sinav){
+  if (90 < sinav && sinav < 100){
+    console.log('A aldın');
+  }
+  else if(80 < sinav && sinav < 89){
+    console.log('B aldın');
+  }
+  else if(70 < sinav && sinav < 79){
+    console.log('C aldın');
+  }
+  else if(60 < sinav && sinav < 69){
+    console.log('D aldın')
+  }
+  else{
+    console.log('F aldın')
+  }
+
 }
+return notHesapla(72)
 
 
 
